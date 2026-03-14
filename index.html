@@ -354,6 +354,86 @@
 
     .project-link:hover { opacity: 0.85; }
 
+    .services {
+      background: var(--white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 28px 24px;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    .service-icon {
+      font-size: 36px;
+      margin-bottom: 14px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .service-features {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .service-features li {
+      font-size: 13px;
+      color: var(--gray);
+      padding: 5px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .service-features li:last-child {
+      border-bottom: none;
+    }
+
+    .service-features li::before {
+      content: "✅ ";
+      margin-right: 4px;
+    }
+
+    .btn-whatsapp {
+      display: block;
+      text-align: center;
+      background: #25d366;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-whatsapp:hover { opacity: 0.85; }
+
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -537,6 +617,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -568,7 +649,7 @@
       <p>I started my development journey with a passion for technology and a vision to make digital tools accessible to everyone. Every product I build carries that same mission — simple, powerful and built with purpose.</p>
       <div class="about-stats">
         <div class="about-stat">
-          <div class="number">6</div>
+          <div class="number">7</div>
           <div class="label">Apps Built</div>
         </div>
         <div class="about-stat">
@@ -652,8 +733,65 @@
         <div class="project-info">
           <h3>BloomCycle</h3>
           <p>A period and ovulation tracker designed for every woman. Log your cycle, track your fertile window, get smart push notifications and view a colour-coded calendar — all offline.</p>
-          <a href="https://teajaykonsult-bloomcycle.vercel.app/" target="_blank" class="project-link">Try It Live</a>
+          <a href="https://my-bloom-cycle.vercel.app/" target="_blank" class="project-link">Try It Live</a>
         </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb" style="background: linear-gradient(135deg, #0a0a2e, #1a3a9e);">🏆</div>
+        <div class="project-info">
+          <h3>Who Wants to Be a Millionaire</h3>
+          <p>A classic quiz game with 60 questions, three lifelines and a ₦1,000,000 prize ladder. Every session is unique with questions drawn randomly. Play free, works offline.</p>
+          <a href="https://wwtbam-by-teajaykonsult.vercel.app/" target="_blank" class="project-link">Try It Live</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-label">
+      <div class="tag">Hire Me</div>
+      <h2>My Services</h2>
+      <p>What I can build for you and your business</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Web Design & Development</h3>
+        <p>Clean, fast and professional websites built for businesses, brands and individuals.</p>
+        <ul class="service-features">
+          <li>Business & landing pages</li>
+          <li>Portfolio websites</li>
+          <li>Personal brand sites</li>
+          <li>Mobile & desktop responsive</li>
+          <li>Fast loading & SEO friendly</li>
+        </ul>
+        <a href="https://wa.me/2349068290856?text=Hi%20Pamilerin%2C%20I%20am%20interested%20in%20your%20Web%20Design%20service.%20Please%20let%27s%20talk." class="btn-whatsapp" target="_blank">💬 Start Project</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Mobile Web App Development</h3>
+        <p>Powerful web apps that work like native mobile apps — installable, offline-ready and fast.</p>
+        <ul class="service-features">
+          <li>PWA — installable on any phone</li>
+          <li>Works offline</li>
+          <li>Custom features & functionality</li>
+          <li>Firebase authentication</li>
+          <li>Real-time data sync</li>
+        </ul>
+        <a href="https://wa.me/2349068290856?text=Hi%20Pamilerin%2C%20I%20am%20interested%20in%20your%20Mobile%20Web%20App%20Development%20service.%20Please%20let%27s%20talk." class="btn-whatsapp" target="_blank">💬 Start Project</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>Maintenance & Support</h3>
+        <p>Already have a website or app? I'll keep it running smoothly, updated and bug-free.</p>
+        <ul class="service-features">
+          <li>Bug fixing & updates</li>
+          <li>Performance improvements</li>
+          <li>Feature additions</li>
+          <li>Content updates</li>
+          <li>Ongoing technical support</li>
+        </ul>
+        <a href="https://wa.me/2349068290856?text=Hi%20Pamilerin%2C%20I%20need%20Maintenance%20and%20Support%20for%20my%20website%2Fapp.%20Please%20let%27s%20talk." class="btn-whatsapp" target="_blank">💬 Get Support</a>
       </div>
     </div>
   </section>
@@ -684,6 +822,11 @@
         <div class="blog-date">March 2026</div>
         <h3>BloomCycle is Live!</h3>
         <p>Our first health app is here — a full period and ovulation tracker with push notifications, fertile window predictions and a colour-coded calendar. Built for every woman.</p>
+      </div>
+      <div class="blog-card">
+        <div class="blog-date">March 2026</div>
+        <h3>Who Wants to Be a Millionaire is Live!</h3>
+        <p>Our first game is here! Answer 15 questions, use your lifelines wisely and win ₦1,000,000. 60 questions in the pool means every session feels fresh. Can you go all the way?</p>
       </div>
       <div class="blog-card">
         <div class="blog-date">Coming Soon</div>
