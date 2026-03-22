@@ -907,7 +907,7 @@ async function sendMessage(){
     agentHistory.push({role:'assistant',content:reply});
   }catch(e){
     typing.remove();
-    appendMsg('Sorry, I am having trouble connecting right now. Please reach out directly on WhatsApp: https://wa.me/2349068290856','bot');
+    appendMsg('ERROR: '+e.message,'bot');
   }
   document.getElementById('agentSend').disabled=false;
 }
