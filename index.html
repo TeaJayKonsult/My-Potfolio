@@ -890,14 +890,9 @@ async function sendMessage(){
   agentHistory.push({role:'user',content:msg});
   const typing=appendTyping();
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
+    const res=await fetch('/api/chat',{
       method:'POST',
-      headers:{
-        'Content-Type':'application/json',
-        'x-api-key':'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',
-        'anthropic-version':'2023-06-01',
-        'anthropic-dangerous-direct-browser-access':'true'
-      },
+      headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
         model:'claude-sonnet-4-20250514',
         max_tokens:1000,
