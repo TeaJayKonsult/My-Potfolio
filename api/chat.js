@@ -26,7 +26,7 @@ module.exports = async function handler(req, res) {
     const data = await new Promise((resolve, reject) => {
       const options = {
         hostname: 'api.deepseek.com',
-        path: '/v1/chat/completions',
+        path: '/chat/completions',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
