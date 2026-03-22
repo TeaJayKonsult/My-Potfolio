@@ -902,7 +902,7 @@ async function sendMessage(){
     });
     const data=await res.json();
     typing.remove();
-    const reply=data.content[0].text;
+    const reply=data.choices[0].message.content;
     appendMsg(reply,'bot');
     agentHistory.push({role:'assistant',content:reply});
   }catch(e){
